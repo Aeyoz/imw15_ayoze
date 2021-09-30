@@ -1,0 +1,21 @@
+.body{
+    text-align: center;
+    background-color: aliceblue;
+    flex: auto;
+    flex-direction: row;
+}
+
+.img1{
+    height: 300px;
+    margin: 10px;
+}
+
+.table{
+    border: none;
+    margin: 10;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+}
+
+.img1:hover {height: 350px;}
