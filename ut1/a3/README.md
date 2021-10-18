@@ -56,7 +56,7 @@ Ahora debemos de linkear nuestro sitio situado en **/etc/nginx/sites-available**
 
 ![nginx](./img/site3/004.png)
 
-Comprobamos que nos pide el acceso y que tenemos que identificarnos
+Comprobamos que nos pide el acceso y que tenemos que identificarnos.
 
 ![nginx](./img/site3/005.png)
 
