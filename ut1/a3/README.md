@@ -1,0 +1,100 @@
+# Trabajando con virtual hosts
+
+Para configurar los sitios necesitaremos el servicio de **nginx**.
+
+![nginx](./img/common/1.png)
+
+Y deberemos de editar el fichero **/etc/hosts** para añadir los servers asociados a la ip de nuestro equipo.
+
+![nginx](./img/common/2.png)
+
+#### Sitio 1: imw.alu"cial".me y imw.alu"cial".me/mec  
+
+Para nuestro primer host debemos de crear un nuevo archivo dentro del directorio **/etc/nginx/sites-available** que se llamará ***imw.alu"cial".me***.
+
+![nginx](./img/site1/001.png)
+
+A la hora de abrir el sitio imw.alu"cial".me se nos abre la imagen de las unidades de este curso.
+
+![nginx](./img/site1/002.png)
+
+Si abrimos nuestro sitio imw.alu"cial".me/mec se nos abre otra página con un enlace que lleva al Real Decreto de ASIR.
+
+![nginx](./img/site1/003.png)
+
+Vemos que nos lleva al Decreto.
+
+![nginx](./img/site1/004.png)
+
+#### Sitio 2: varlib.alu"cial".me
+
+Para nuestro segundo host debemos de crear otro archivo dentro del directorio **/etc/nginx/sites-available** de nombre ***varlib.alu"cial".me***.
+
+El archivo de configuración del segundo sitio debe contener un parámetro que especifique que el puerto de acceso sea el 9000 y que su ruta sea **/var/lib** para que, a la hora de añadir el **autoindex on;** se muestren los archivos de ese directorio.
+
+![nginx](./img/site2/002.png)
+
+Listado de archivos del directorio **/var/lib**.
+
+![nginx](./img/site2/001.png)
+
+#### Sitio 3: ssl.alu"cial".me/students
+
+Para crear el archivo de configuración .htpasswd debemos de ejecutar el comando perl -le 'print crypt("2asir", 'fewsalt')' que nos da el siguiente texto: ***fePQDifyQ69lo*** para general una contraseña encriptada y luego ejecutaremos el comando echo "usuario1:fePQDifyQ69lo" > .htpasswd.
+
+![nginx](./img/site3/001.png)
+
+Editamos el fichero **/etc/nginx/sites-available** para configurar el host.  
+
+![nginx](./img/site3/002.png)
+
+Ahora debemos de linkear nuestro sitio situado en **/etc/nginx/sites-available** a **/etc/nginx/sites-enabled**.
+```
+ Esto aunque no se haya especificado en los hosts anteriores también se debe hacer.
+
+```
+
+![nginx](./img/site3/004.png)
+
+Comprobamos que nos pide el acceso y que tenemos que identificarnos.
+
+![nginx](./img/site3/005.png)
+
+Nos identidicamos y vemos que nos aparece un listado de nuestros compañeros.
+
+![nginx](./img/site3/006.png)
+
+#### Sitio 4: redirect.alu"cial".me y target.alu"cial".me
+
+Para montar este host deberemos de crear 2 servidores:
+* **target**
+* **redirect**
+
+Cuando accedamos al servidor *redirect* nos debe de llevar al servidor target mediante redireccionamiento.
+
+Configuracion del servidor **target**:
+
+![nginx](./img/site4/001.png)
+
+Configuracion del servidor **redirect**:
+
+![nginx](./img/site4/002.png)
+
+Vemos que hicimos el enlace simbólico desde **sites-available** a **sites-enabled**.
+
+![nginx](./img/site4/003.png)
+
+Puede que nos de error al intentar acceder al servidor, se soluciona borrando la caché del navegador. Nos dirigimos al panel de ajustes.
+
+![nginx](./img/site4/004.png)
+
+Buscamos **caché** y limpiamos los datos.
+
+![nginx](./img/site4/005.png)
+Ahora probamos a entrar a **redirect.alu"cial".me/test** por ejemplo y vemos que nos lleva a **target"cial".me**
+
+![nginx](./img/site4/006.png)
+
+
+
+![nginx](./img/site4/007.png)
