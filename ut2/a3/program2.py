@@ -12,3 +12,5 @@ if n > 0:
     print(f'La suma de cada uno de los terminos de {n} es {sum}')
 else:
     print('El número no es válido')
+
+# Programa elaborado por: Ayoze Hernández, Angel David y David Quintero

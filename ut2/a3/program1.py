@@ -11,3 +11,5 @@ if n > 0:
         print(f'El numero {n} es primo')
 else:
     print(f'El numero {n} no es valido')
+
+# Programa elaborado por: Ayoze Hernández, Angel David y David Quintero    

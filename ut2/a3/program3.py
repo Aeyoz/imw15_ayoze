@@ -18,3 +18,5 @@ if x > 0 and y > 0:
                 break
 else:
     print('El numero no es valido')
+
+# Programa elaborado por: Ayoze Hernández, Angel David y David Quintero
