@@ -1,8 +1,8 @@
+# Importamos la librería random para realizar combinaciones aleatorias y definimos variables.
+
 import random
 nucleobases = "ATGC"
-
 dna_length = 100
-
 sequence = ''.join([random.choice(nucleobases) for i in range(dna_length)])
 
 A = 0
@@ -20,9 +20,11 @@ for i in sequence:
     else:
         C = C + 1
 
-print(f'Adenina: {A}')
-print(f'Timina: {T}')
-print(f'Guanina: {G}')
-print(f'Citosina: {C}')
+# Devolvemos los resultados
+
+print(f'''Adenina: {A}
+Timina: {T}
+Guanina: {G}
+Citosina: {C}''')
 
 # Programa elaborado por: Ayoze Hernández, Angel David y David Quintero

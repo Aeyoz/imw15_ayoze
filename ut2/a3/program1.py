@@ -1,6 +1,10 @@
+# Importamos datos por linea de comandos
+
 import sys
 
 n = int(sys.argv[1])
+
+#~Elaboramos el programa
 
 if n > 0:
     for i in range(2, n):
@@ -12,4 +16,4 @@ if n > 0:
 else:
     print(f'El numero {n} no es valido')
 
-# Programa elaborado por: Ayoze Hernández, Angel David y David Quintero    
+# Programa elaborado por: Ayoze Hernández, Angel David y David Quintero
