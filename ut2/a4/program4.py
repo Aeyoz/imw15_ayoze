@@ -2,7 +2,7 @@ import sys
 
 entry = list(sys.argv[1:])
 
-lista = [int(i) for i in entry]
+lista = [float(i) for i in entry]
 
 media = 0
 notas_positivas = 0
