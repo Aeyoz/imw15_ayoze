@@ -5,10 +5,14 @@ nucleobases = "ATGC"
 dna_length = 100
 sequence = ''.join([random.choice(nucleobases) for i in range(dna_length)])
 
+# Definimos las variables que representan cada uno de los compuestos del adn
+
 A = 0
 T = 0
 G = 0
 C = 0
+
+# Comprobamos cuantas veces aparece cada una en sequence
 
 for i in sequence:
     if i == 'A':

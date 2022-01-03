@@ -1,16 +1,23 @@
 # Importamos datos por linea de comandos y definimos variables.
+
 import sys
-# Entry registrsa todas las entradas desde el índice 1 hasta el último que se registre
+
+# Entry registra todas las entradas desde el índice 1 hasta el último que se registre
+
 entry = list(sys.argv[1:])
+
 # Se convierten todos los datos de entry (str) a flotantes (float)
+
 lista = [float(i) for i in entry]
+
 # Definimos variables.
+
 media = 0
 notas_positivas = 0
 total_items = 0
 notas_negativas = 0
 
-# Elaboramos el programa
+# Elaboramos el programa que recuenta las notas de los alumnos
 
 for i in lista:
     if i < 0 or i > 10:

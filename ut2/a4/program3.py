@@ -13,7 +13,9 @@ if k > 0:
         contador = (long == k)
         if contador == True:
             cont = cont + 1
+
 # Devolvemos los resultados por pantalla.
+
     print(f'Hay {cont} palabras de longitud {k}')
 else:
     print(f'El caracter {k} no es válido porque no es un número o no es un número positivo')
