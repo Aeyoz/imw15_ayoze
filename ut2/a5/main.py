@@ -5,7 +5,7 @@ import sys
 
 # Definimos una lista con las vocales
 
-list = ["a","e","i","o","u"]
+list = ["a","e","i","o","u","A","E","I","O","U"]
 
 # Función para contar vocales
 

@@ -4,7 +4,7 @@ import sys
 
 n = int(sys.argv[1])
 
-#~Elaboramos el programa
+# Elaboramos el programa
 
 if n > 0:
     for i in range(2, n):
