@@ -1,7 +1,7 @@
 
 <center>
 
-# TÍTULO DE LA PRÁCTICA
+# Instalación y configuración de Wordpress.
 
 
 </center>
